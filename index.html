@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electrónica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Electrónica</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#auriculares">Auriculares</a></li>
+            <li><a href="#smartwatches">Smartwatches</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a nuestra tienda de electrónica</h2>
+            <!-- Contenido de la sección de inicio -->
+        </section>
+        <section id="auriculares">
+            <h2>Auriculares</h2>
+            <div class="product" id="product1">
+                <img src="auriculares.jpg" alt="Auriculares">
+                <h3>Auriculares Bluetooth</h3>
+                <p>Precio: $50</p>
+                <button onclick="addToCart('Auriculares Bluetooth', 50)">Agregar al carrito</button>
+            </div>
+            <!-- Agrega más productos de auriculares aquí -->
+        </section>
+        <section id="smartwatches">
+            <h2>Smartwatches</h2>
+            <div class="product" id="product2">
+                <img src="smartwatch.jpg" alt="Smartwatch">
+                <h3>Smartwatch Fitness</h3>
+                <p>Precio: $100</p>
+                <button onclick="addToCart('Smartwatch Fitness', 100)">Agregar al carrito</button>
+            </div>
+            <!-- Agrega más productos de smartwatches aquí -->
+        </section>
+    </main>
+    <footer>
+        <p>Contacto: <a href="https://wa.me/2646086287">2646086287 (WhatsApp)</a></p>
+    </footer>
+    <div id="cart" onclick="openCart()">
+        <span id="cart-count">0</span>
+        <img src="cart-icon.png" alt="Carrito de compras">
+    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Comprar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
